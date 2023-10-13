@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:56C661E1
+NODE:I LEVEL:0 LINE:1 "C:\Users\Danial-Rahimi\Documents\project NRF\NRF24L01(RECIVE)\Version 1 - Copy\uart.h"
+NODE:I LEVEL:0 LINE:2 "C:\cvavr\inc\delay.h"
+NODE:F LEVEL:0 LINE:3 "UART_RxChar(void)"
+NODE:F LEVEL:0 LINE:9 "UART_TxChar(uint8_t ch)"
+NODE:F LEVEL:0 LINE:15 "UART_SendString(uint8_t * str,uint8_t length)"
+NODE:F LEVEL:0 LINE:24 "UART_SendString2(uint8_t * str)"

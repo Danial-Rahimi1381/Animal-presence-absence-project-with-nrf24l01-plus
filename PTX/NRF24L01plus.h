@@ -1,0 +1,96 @@
+// SPI functions
+#include "spi.h"
+#include <delay.h>
+#define CE_Enable PORTB.1 = 1;
+#define CE_Disable PORTB.1 = 0;
+#define CSN_Enable  PORTB.2 = 0;
+#define CSN_Disable PORTB.2 = 1;
+
+/* Instruction Mnemonics */
+#define R_REGISTER 0x00
+#define W_REGISTER 0x20
+#define REGISTER_MASK 0x1F
+#define ACTIVATE 0x50
+#define R_RX_PL_WID 0x60
+#define R_RX_PAYLOAD 0x61
+#define W_TX_PAYLOAD 0xA0
+#define W_ACK_PAYLOAD 0xA8
+#define FLUSH_TX 0xE1
+#define FLUSH_RX 0xE2
+#define REUSE_TX_PL 0xE3
+#define NOP 0xFF
+
+
+/* CONFIG: configuration register */
+#define CONFIG			0x00
+#define MASK_RX_DR		6
+#define MASK_TX_DS		5
+#define MASK_MAX_RT		4
+#define EN_CRC			3
+#define CRC0			2
+#define PWR_UP			1
+#define PRIM_RX			0
+//	States
+#define POWERUP		1
+#define POWERDOWN	2
+#define RECEIVE		3
+#define TRANSMIT	4
+#define STANDBY1	5
+#define STANDBY2	6
+/* STATUS: status register */
+#define STATUS			0x07
+#define RX_DR			6
+#define TX_DS			5
+#define MAX_RT			4
+#define RX_P_NO			1	/* 3:1 */
+#define TX_FULL			0
+
+/* Memory Map */
+#define CONFIG 0x00
+#define EN_AA 0x01
+#define EN_RXADDR 0x02
+#define SETUP_AW 0x03
+#define SETUP_RETR 0x04
+#define RF_CH 0x05
+#define RF_SETUP 0x06
+#define STATUS 0x07
+#define OBSERVE_TX 0x08
+#define CD 0x09
+#define RX_ADDR_P0 0x0A
+#define RX_ADDR_P1 0x0B
+#define RX_ADDR_P2 0x0C
+#define RX_ADDR_P3 0x0D
+#define RX_ADDR_P4 0x0E
+#define RX_ADDR_P5 0x0F
+#define TX_ADDR 0x10
+#define RX_PW_P0 0x11
+#define RX_PW_P1 0x12
+#define RX_PW_P2 0x13
+#define RX_PW_P3 0x14
+#define RX_PW_P4 0x15
+#define RX_PW_P5 0x16
+#define FIFO_STATUS 0x17
+#define DYNPD 0x1C
+#define FEATURE 0x1D
+
+/////////////////////////////////////
+void NRF24_Write_Register(uint8_t reg, uint8_t Data);
+void NRF24_WriteMulti_Register(uint8_t reg, uint8_t * Data, uint8_t size);
+uint8_t NRF24_Read_Register(uint8_t reg);
+void NRF24_ReadMulti_Register(uint8_t reg, uint8_t *data, uint8_t size);
+// send the command to the NRF 
+void NRF24_SendCMD(uint8_t cmd);
+void NRF24L01plus_Init();
+void NRF24_TXMode( uint8_t const * Address, uint8_t channel) ;
+void nrf24_start_listening(void);
+void nrf24_state(uint8_t state);
+uint8_t NRF24_Transmit(uint8_t * data , uint8_t length);
+uint8_t NRF24_Trasnmit_with_Address(uint8_t * data , uint8_t length , uint8_t const* Address, uint8_t number_pipe);
+void NRF_RESET(uint8_t REG);
+void writeAckPayload(uint8_t number_pipe, uint8_t *Data, uint8_t DataSize);
+void setTX_Address(uint8_t const* Address, uint8_t number_pipe);
+void set_addr( uint8_t const* Address, uint8_t channel);
+uint8_t isDataAvailable(int pipenum);
+void NRF24_Recive(uint8_t *data,uint8_t length);
+void PowerDown();
+void PowerUP();

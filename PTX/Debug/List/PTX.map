@@ -1,0 +1,40 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+TxAddress                                                                         0x0160      50
+TxData                                                                            0x0192      60
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+counter_delay                                                                     R4,R5        2
+request_counter_delay                                                             R6,R7        2
+dipSwitchStatus                                                                   R9           1
+flag_tx                                                                           R8           1
+counter                                                                           R11          1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+timer1_compa_isr                                                                  0x00095     19
+DipSwitch                                                                         0x000A8     15
+main                                                                              0x000B7    101
+NRF24_Write_Register                                                              0x0011C     19
+NRF24_WriteMulti_Register                                                         0x0012F     17
+NRF24_Read_Register                                                               0x00140     17
+NRF24L01plus_Init                                                                 0x00151     22
+NRF24_TXMode                                                                      0x00167     20
+set_addr                                                                          0x0017B     24
+nrf24_state                                                                       0x00193     66
+nrf24_start_listening                                                             0x001D5      4
+NRF24_Transmit                                                                    0x001D9     59
+NRF_RESET                                                                         0x00214    106
+UART_TxChar                                                                       0x0027E      6
+SPI_Transmit                                                                      0x00284      7
+SPI_TransmitBytes                                                                 0x0028B      9
+SPI_Transmit_nrf24                                                                0x00294     11
+SPI_Receive                                                                       0x0029F      6

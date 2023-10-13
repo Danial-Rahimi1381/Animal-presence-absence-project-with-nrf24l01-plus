@@ -1,0 +1,52 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+str                                                                               0x0162      20
+voltage_battery                                                                   0x0176       4
+RXData                                                                            0x017A      32
+RxAddress                                                                         0x019A       1
+_seed                                                                             0x019B       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+dipSwitchStatus                                                                   R4,R5        2
+status                                                                            R7           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+timer0_ovf_isr                                                                    0x00065     41
+read_adc                                                                          0x0008E     13
+Battery_monitoring                                                                0x0009B     50
+DipSwitch                                                                         0x000CD     67
+main                                                                              0x0013D    135
+NRF24_Write_Register                                                              0x001C4     19
+NRF24_WriteMulti_Register                                                         0x001D7     16
+NRF24_Read_Register                                                               0x001E7     17
+NRF24_SendCMD                                                                     0x001F8      6
+NRF24L01plus_Init                                                                 0x001FE     30
+NRF24_RxMode                                                                      0x0021C     37
+nrf24_write_ack                                                                   0x00241     28
+NRF24_Recive                                                                      0x0027A     28
+NRF_RESET                                                                         0x00296    111
+SPI_Transmit                                                                      0x00305      6
+SPI_TransmitBytes                                                                 0x0030B     23
+SPI_Receive                                                                       0x00322      6
+SPI_ReceiveBytes                                                                  0x00328     24
+UART_TxChar                                                                       0x00340      7
+UART_SendString                                                                   0x00347     19
+put_buff_G100                                                                     0x0035A     45
+_ftoe_G100                                                                        0x00387    144
+_print_G100                                                                       0x00417    462
+sprintf                                                                           0x005E5     42
+strcpyf                                                                           0x0060F     12
+strlen                                                                            0x0061B     11
+strlenf                                                                           0x00626     12
+ftrunc                                                                            0x00632     48
+floor                                                                             0x00662     15
+ftoa                                                                              0x00671    135

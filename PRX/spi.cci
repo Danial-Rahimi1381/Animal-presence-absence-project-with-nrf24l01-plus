@@ -1,0 +1,8 @@
+VERSION:3 SOURCE_TIMESTAMP:56EB5BC8
+NODE:I LEVEL:0 LINE:2 "C:\Users\Danial-Rahimi\Documents\project NRF\NRF24L01(RECIVE)\Version 1 - Copy\spi.h"
+NODE:I LEVEL:0 LINE:3 "C:\cvavr\inc\string.h"
+NODE:F LEVEL:0 LINE:7 "SPI_Transmit(uint8_t data)"
+NODE:F LEVEL:0 LINE:16 "SPI_TransmitBytes(const uint8_t * data,uint16_t length)"
+NODE:F LEVEL:0 LINE:29 "SPI_Receive(void)"
+NODE:F LEVEL:0 LINE:40 "SPI_ReceiveBytes(uint8_t * buffer,uint16_t length)"
+NODE:F LEVEL:0 LINE:48 "SPI_ReceiveBytes2(uint8_t * buffer)"
