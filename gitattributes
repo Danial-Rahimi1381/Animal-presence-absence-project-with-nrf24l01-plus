@@ -1,4 +1,6 @@
+# Force GitHub to recognize C language for C source files
 *.c linguist-language=C
 *.h linguist-language=C
-*.pl linguist-language=Perl
-*.asm linguist-language=Assembly
+
+# Exclude Perl files from being recognized as a primary language
+*.pl linguist-language=plaintext
