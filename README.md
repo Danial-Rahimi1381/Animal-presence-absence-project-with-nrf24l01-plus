@@ -3,7 +3,7 @@
 ## Author
 
 - **Name:** Daniel Rahimi
-- **Email:** [DanialRahimi4450@gmail.com]پ
+- **Email:** [DanialRahimi4450@gmail.com]
 This project is designed for an attendance management system using an AVR microcontroller and the NRF24L01+ module. The code for this project is written in **C**.
 
 ## Features
